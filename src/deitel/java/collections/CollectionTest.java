@@ -36,7 +36,13 @@ public class CollectionTest {
 
     private static void removeColors(Collection<String> collection1, Collection<String> collection2){
 
-        System.out.println("Calling RemoveColors");
+        System.out.println("\nCalling RemoveColors");
+
+        Iterator<String> iter2 = collection2.iterator();
+        while(iter2.hasNext()){
+            System.out.println(iter2.next());
+        }
+
         Iterator<String> inter = collection1.iterator();
         int i=0;
         while(inter.hasNext()){
