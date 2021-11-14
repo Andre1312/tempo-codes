@@ -27,7 +27,7 @@ public class CollectionTest {
 
         removeColors(list, removeList);
 
-        System.out.printf("%n%nArrayList after calling removeColors");
+        System.out.printf("%n%nArrayList after calling removeColors%n");
 
         for (String color: list)
             System.out.printf("%s ", color);
@@ -36,12 +36,13 @@ public class CollectionTest {
 
     private static void removeColors(Collection<String> collection1, Collection<String> collection2){
 
-        System.out.println("Calling RemoveColora");
-        Iterator<String> iterator = collection1.iterator();
+        System.out.println("Calling RemoveColors");
+        Iterator<String> inter = collection1.iterator();
         int i=0;
-        while(iterator.hasNext()){
-            if (collection2.contains(iterator.hasNext()))
-                iterator.remove();
+        while(inter.hasNext()){
+            if (collection2.contains(inter.next())){
+                inter.remove();
+            }
             System.out.println("Iteration: "+i);
             i++;
         }
